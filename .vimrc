@@ -23,14 +23,15 @@ Plugin 'w0rp/ale'
 Plugin 'preservim/nerdtree'
 "Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
+Plugin 'dominikduda/vim_current_word'
+Plugin 'majutsushi/tagbar'
+
 
 call vundle#end()
 
-<<<<<<< HEAD
-"filetype plugin indent on
-=======
 filetype plugin indent on
->>>>>>> 6020360b3672c91332010657ad0dd52a9b1c0ad6
 
 set laststatus=2
 set ruler
@@ -54,14 +55,23 @@ set ignorecase
 set wildmenu
 set showcmd
 
+set splitright
+set splitbelow
+
 syntax enable
 syntax on
 
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-p> :GFiles<CR>
 
-<<<<<<< HEAD
 "colorscheme tir_black
+
+" Tagbar
+let g:tagbar_width=35
+let g:tagbar_autofocus=1
+let g:tagbar_right = 1
+nmap <F3> :TagbarToggle<CR>
+
 
 " airline setting
 let g:airline_powerline_fonts = 1
@@ -105,9 +115,4 @@ let g:ale_fixers.javascript = ['eslint']
 
 let g:ale_fix_on_save = 1
 " }}}
-=======
-let g:ale_fixers = {'typescript': ['eslint']}
-let g:ale_fixers.javascript = ['eslint']
-let g:ale_fix_on_save = 1
->>>>>>> 6020360b3672c91332010657ad0dd52a9b1c0ad6
 
