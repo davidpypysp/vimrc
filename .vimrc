@@ -26,7 +26,11 @@ Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
 
+<<<<<<< HEAD
 "filetype plugin indent on
+=======
+filetype plugin indent on
+>>>>>>> 6020360b3672c91332010657ad0dd52a9b1c0ad6
 
 set laststatus=2
 set ruler
@@ -56,6 +60,7 @@ syntax on
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-p> :GFiles<CR>
 
+<<<<<<< HEAD
 "colorscheme tir_black
 
 " airline setting
@@ -100,4 +105,9 @@ let g:ale_fixers.javascript = ['eslint']
 
 let g:ale_fix_on_save = 1
 " }}}
+=======
+let g:ale_fixers = {'typescript': ['eslint']}
+let g:ale_fixers.javascript = ['eslint']
+let g:ale_fix_on_save = 1
+>>>>>>> 6020360b3672c91332010657ad0dd52a9b1c0ad6
 
