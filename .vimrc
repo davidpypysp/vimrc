@@ -24,13 +24,6 @@ call vundle#end()
 
 filetype plugin indent on
 
-
-"set background=dark
-"colorscheme solarized
-"colorscheme molokai
-"olorscheme phd
-
-
 set laststatus=2
 set ruler
 set number
@@ -48,3 +41,8 @@ syntax on
 
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-p> :GFiles<CR>
+
+let g:ale_fixers = {'typescript': ['eslint']}
+let g:ale_fixers.javascript = ['eslint']
+let g:ale_fix_on_save = 1
+
