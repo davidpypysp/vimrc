@@ -38,6 +38,12 @@ set hlsearch
 set ts=4
 set sts=4
 set sw=4
+set expandtab
+set autoindent
+set smartindent
+
+set autoread
+
 
 set incsearch
 set ignorecase
@@ -51,8 +57,6 @@ nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-p> :GFiles<CR>
 
 "colorscheme tir_black
-
-:set list lcs=tab:\|\
 
 " airline setting
 let g:airline_powerline_fonts = 1
