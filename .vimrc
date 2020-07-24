@@ -27,7 +27,9 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'dominikduda/vim_current_word'
 Plugin 'majutsushi/tagbar'
-
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 
 call vundle#end()
 
@@ -65,6 +67,10 @@ nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-p> :GFiles<CR>
 
 "colorscheme tir_black
+
+let g:deoplete#enable_at_startup = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Tagbar
 let g:tagbar_width=35
@@ -107,7 +113,7 @@ let g:ale_linters = {
 \   'c': ['clang'],
 \   'python': ['pylint'],
 \   'javascript': ['eslint'],
-\   'typescript': ['eslint'],
+\   'typescript': ['eslint', 'tsserver'],
 \}
 
 let g:ale_fixers = {'typescript': ['eslint']}
